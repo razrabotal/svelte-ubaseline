@@ -8,12 +8,18 @@
 <style lang="scss">
   @import "src/styles/base.scss";
 
+  section {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+
 	p {
     font-size: 20px;
     @include theme(background-color, background-color);
+    @include theme(color, key-color);
   }
 </style>
 
-<div class="content {theme}">
+<section class={theme}>
   <p>Article {data.title} {get($t, 'global.title')}</p>
-</div>
+</section>

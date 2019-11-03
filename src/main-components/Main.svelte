@@ -23,7 +23,6 @@
   @import "src/styles/base.scss";
 
   .content {
-    border: 1px solid $key-color;
-    margin-top: 30px;
+    margin-bottom: 30px;
   }
 </style>

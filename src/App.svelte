@@ -9,7 +9,7 @@
 </script>
 
 <main>
-	<Router>
+	<Router basepath={'/'}>
 		{#if $settings}
 			<Header title={$settings.siteTitle} />
 		{/if}
@@ -21,3 +21,7 @@
 		{/if}
 	</Router>
 </main>
+
+<style lang="scss" global>
+	@import "src/styles/index.scss";
+</style>
