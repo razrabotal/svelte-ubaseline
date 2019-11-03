@@ -1,0 +1,29 @@
+// Variables
+$key-color: #7d8bda;
+$background-color: #eee;
+$text-color: #333;
+
+// Media-queries
+@mixin sm { @media (min-width: 600px) { @content; } }
+@mixin md { @media (min-width: 900px) { @content; } }
+@mixin lg { @media (min-width: 1200px) { @content; } }
+@mixin xl { @media (min-width: 1800px) { @content; } }
+
+// Theming
+// .red - data from server
+$default: (
+  key-color: $key-color,
+  background-color: $background-color
+);
+$red: (
+  key-color: $background-color,
+  background-color: $key-color
+);
+@mixin theme($property, $value) {
+  .red & {
+    #{$property}: map-get($red, $value);
+  }
+  #{$property}: map-get($default, $value);
+}
+
+@import "mixins.scss";
