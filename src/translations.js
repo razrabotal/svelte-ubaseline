@@ -1,9 +1,9 @@
 import { readable } from 'svelte/store';
-import { api2 } from "./config.js";
+import { api } from "./config.js";
 
 export const t = readable(null, function start(set) {
   return (async function() {
-    const dictionary = await fetch(`${api2}/translations`).then(r => r.json());
+    const dictionary = await fetch(`${api}?value=translations`).then(r => r.json());
     set(dictionary);
   })();
 });

@@ -8,7 +8,7 @@
   let navigation = [];
 
   async function getData() {
-		navigation = await fetch(`${api}/navigation`).then(r => r.json());
+		navigation = await fetch(`${api}?value=navigation`).then(r => r.json());
   }
   onMount(getData);
 </script>

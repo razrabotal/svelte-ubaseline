@@ -7,7 +7,7 @@
 	let routes = [];
 
 	async function getData() {
-		routes = await fetch(`${api}/routes`).then(r => r.json());
+		routes = await fetch(`${api}?value=routes`).then(r => r.json());
 	}
 
 	onMount(getData);

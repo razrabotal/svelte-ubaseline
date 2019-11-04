@@ -14,7 +14,7 @@
     `${data.title} ${$settings.pageTitleSeparator} ${$settings.siteTitle}` : '';
 
   async function getData() {
-    data = await fetch(`${api + url}`).then(r => r.json());
+    data = await fetch(`${api}?page=${url}`).then(r => r.json());
   }
 
   onMount(getData);

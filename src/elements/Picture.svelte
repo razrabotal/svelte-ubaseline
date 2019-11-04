@@ -9,9 +9,6 @@
     width: 100%;
   }
 
-  picture {
-    
-  }
   picture.cover {
     display: block;
     position: relative;
